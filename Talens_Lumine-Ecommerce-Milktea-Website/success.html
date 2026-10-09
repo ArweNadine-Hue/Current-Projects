@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Lumine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-[#FAF6F0] text-gray-800 min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-white border-b border-[#F5EDE4] sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#F4C95F] to-[#FF9EBE] rounded-2xl flex items-center justify-center text-white text-2xl shadow-sm">🧋</div>
+                <span class="text-3xl font-black tracking-tighter text-[#2C3E6B]">Lumine</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-500">
+                <!-- Discovery Links -->
+                <a href="index.html" class="hover:text-[#F4C95F]">Menu</a>
+                <a href="faqs.html" class="hover:text-[#F4C95F] transition-colors">FAQ</a>
+                
+                <!-- User & Account Links -->
+                <a href="favorites.html" class="hover:text-[#F4C95F] transition-colors">Favorites</a>
+                <a href="orders.html" class="hover:text-[#F4C95F] transition-colors">History</a>
+                
+                <!-- Profile -->
+                <a href="profile.html" class="hover:text-[#F4C95F] transition-colors flex items-center gap-2 border-l pl-8">
+                    <i class="fa-solid fa-user-circle"></i> <span id="display-name">Profile</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button & Cart -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleMobileMenu(true)" class="md:hidden text-xl text-gray-700 p-2"><i class="fa-solid fa-bars"></i></button>
+                <a href="cart.html" class="relative w-10 h-10 bg-[#F5EDE4] rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#F4C95F] hover:text-white transition-all">
+                    <i class="fa-solid fa-cart-shopping text-sm"></i>
+                    <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-[#F4C95F] text-white font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-sm">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="drawer-panel" class="fixed top-0 left-0 bottom-0 w-64 bg-white p-6 transform -translate-x-full transition-transform duration-300 flex flex-col justify-between shadow-xl">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <span class="font-black text-[#F4C95F] tracking-tight">Lumine</span>
+                    <button onclick="toggleMobileMenu(false)" class="text-xl text-gray-400">&times;</button>
+                </div>
+                <div class="flex flex-col gap-4 font-bold text-sm text-gray-600">
+                    <a href="index.html" class="text-[#F4C95F]">🧋 Shop Catalog</a>
+                    <a href="faq.html">❓ FAQ</a>
+                    <a href="wishlist.html">❤️ Favorites List</a>
+                    <a href="orders.html">📜 Prior Invoices</a>
+                </div>
+            </div>
+            <a href="profile.html" class="flex items-center gap-2 font-bold text-sm text-gray-600 pt-6 border-t">
+                <i class="fa-solid fa-user-circle"></i> Profile
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-1 flex items-center justify-center p-6">
+        <div class="max-w-md w-full bg-white rounded-3xl border border-[#F5EDE4] p-8 text-center shadow-xl">
+            <div class="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-inner">✅</div>
+            <h1 class="text-2xl font-black text-[#2C3E6B] mb-1">Order Transmitted!</h1>
+            <p class="text-xs text-gray-400 font-medium px-4 mb-6">Our brewers are building your custom recipe now.</p>
+
+            <div class="bg-[#F5EDE4] rounded-xl p-4 text-left border border-[#F5EDE4] text-xs font-semibold space-y-2 mb-6">
+                <div class="flex justify-between"><span class="text-gray-400">Tracking Reference</span><span id="success-order-id" class="font-mono font-bold text-[#2C3E6B]">#Lumine2026-PENDING</span></div>
+                <div class="flex justify-between"><span class="text-gray-400">Settlement Total</span><span id="success-order-total" class="text-[#F4C95F] font-black">₱0</span></div>
+            </div>
+
+            <div class="flex gap-2">
+                <a href="orders.html" class="flex-1 bg-[#F4C95F] text-white font-bold text-xs py-3 rounded-xl shadow-sm hover:brightness-110 transition-colors">Order History</a>
+                <a href="index.html" class="flex-1 bg-[#F5EDE4] text-[#2C3E6B] font-bold text-xs py-3 rounded-xl hover:bg-white transition-colors">Return Home</a>
+            </div>
+        </div>
+    </main>
+
+    
+
+<script src="config.js"></script>
+<script src="utilities.js"></script>
+<script src="products.js"></script>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+<script src="checkout.js"></script>
+<script src="orders.js"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

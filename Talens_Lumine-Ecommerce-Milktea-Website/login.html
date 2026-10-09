@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Lumine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FAF6F0] min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-sm border border-[#F5EDE4]">
+        
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#F4C95F] to-[#FF9EBE] rounded-2xl flex items-center justify-center text-white text-2xl shadow-sm">🧋</div>
+                <span class="text-3xl font-black tracking-tighter text-[#2C3E6B]">Lumine</span>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-black text-[#2C3E6B] mb-6 text-center">Welcome Back! 🧋</h2>
+        
+        <form onsubmit="handleLogin(event)" class="space-y-4">
+            <input type="email" id="login-email" placeholder="Email Address" 
+                   class="w-full p-4 bg-[#F5EDE4] rounded-2xl outline-none font-medium text-sm border border-[#F5EDE4] focus:border-[#F4C95F] transition-all" required>
+            
+            <input type="password" id="login-password" placeholder="Password" 
+                   class="w-full p-4 bg-[#F5EDE4] rounded-2xl outline-none font-medium text-sm border border-[#F5EDE4] focus:border-[#F4C95F] transition-all" required>
+            
+            <button type="submit" 
+                    class="w-full bg-gradient-to-r from-[#F4C95F] to-[#FF9EBE] text-white font-bold py-4 rounded-2xl hover:brightness-110 transition-all">
+                Login
+            </button>
+        </form>
+        
+        <p class="text-center text-xs text-gray-400 mt-6 font-medium">
+            New to Lumine? 
+            <a href="register.html" class="text-[#F4C95F] font-bold hover:underline">Register here</a>
+        </p>
+    </div>
+
+    
+
+<script src="config.js"></script>
+<script src="utilities.js"></script>
+<script src="products.js"></script>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+<script src="checkout.js"></script>
+<script src="orders.js"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

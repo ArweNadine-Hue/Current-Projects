@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumine • Frequently Asked Questions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        summary { list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        .plus-icon { color: #F4C95F; font-size: 1.25rem; }
+    </style>
+</head>
+<body class="bg-[#FAF6F0] text-gray-800 min-h-screen">
+
+    <nav class="bg-white border-b border-[#F5EDE4] sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#F4C95F] to-[#FF9EBE] rounded-2xl flex items-center justify-center text-white text-2xl shadow-sm">🧋</div>
+                <span class="text-3xl font-black tracking-tighter text-[#2C3E6B]">Lumine</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-500">
+                <!-- Discovery Links -->
+                <a href="index.html" class="hover:text-[#F4C95F]">Menu</a>
+                <a href="faqs.html" class="text-[#F4C95F] transition-colors">FAQ</a>
+                
+                <!-- User & Account Links -->
+                <a href="favorites.html" class="hover:text-[#F4C95F] transition-colors">Favorites</a>
+                <a href="orders.html" class="hover:text-[#F4C95F] transition-colors">History</a>
+                
+                <!-- Profile -->
+                <a href="profile.html" class="hover:text-[#F4C95F] transition-colors flex items-center gap-2 border-l pl-8">
+                    <i class="fa-solid fa-user-circle"></i> <span id="display-name">Profile</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button & Cart -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleMobileMenu(true)" class="md:hidden text-xl text-gray-700 p-2"><i class="fa-solid fa-bars"></i></button>
+                <a href="cart.html" class="relative w-10 h-10 bg-[#F5EDE4] rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#F4C95F] hover:text-white transition-all">
+                    <i class="fa-solid fa-cart-shopping text-sm"></i>
+                    <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-[#F4C95F] text-white font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-sm">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main FAQ Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-12 items-start">
+        
+        <!-- Left Side: Image -->
+        <div class="w-full md:w-1/2">
+            <img src="sample-lumine.jpg" alt="Lumine Milk Tea Selection" class="w-full rounded-2xl shadow-lg">
+        </div>
+
+        <!-- Right Side: Questions -->
+        <div class="w-full md:w-1/2">
+            <h1 class="text-4xl font-black text-[#2C3E6B] mb-10">We're Here to Help!</h1>
+            
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    What makes Lumine's tea special? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">We combine premium, ethically sourced tea leaves with artisanal brewing techniques to ensure a refined, mindful experience in every sip.</p>
+            </details>
+
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    Can I adjust my drink to my liking? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">Absolutely! You have full control over your drink. Simply select your preferred sugar and ice levels directly through our menu.</p>
+            </details>
+
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    How do I use my vouchers? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">You can apply your available vouchers directly during the checkout process. Simply select your preferred discount from the voucher dropdown menu in your order summary.</p>
+            </details>
+
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    Can I reorder my previous drinks? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">Certainly! Visit your "Order History" page, select a past order, and click the "Reorder All" button to quickly add your previous selection back to your cart.</p>
+            </details>
+
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    How do payments work? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">We accept GCash, Credit/Debit cards, and Cash on Delivery (COD).</p>
+            </details>
+
+            <details class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-4">
+                <summary class="flex justify-between items-center font-bold text-[#2C3E6B] cursor-pointer">
+                    How can I leave feedback on my order? <i class="fa-solid fa-circle-plus plus-icon"></i>
+                </summary>
+                <p class="text-gray-600 mt-4 text-sm">We love your input! In your "Order History," you can rate each individual drink you’ve ordered from 1 to 5 stars. Your feedback helps us serve you better.</p>
+            </details>
+        </div>
+    </main>
+
+
+<script src="config.js"></script>
+<script src="utilities.js"></script>
+<script src="products.js"></script>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+<script src="checkout.js"></script>
+<script src="orders.js"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
